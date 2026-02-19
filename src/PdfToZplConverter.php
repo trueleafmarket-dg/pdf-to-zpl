@@ -63,7 +63,7 @@ class PdfToZplConverter implements ZplConverterService {
     * @return Collection<int, string> A list of raw PNG data as a string
     * @throws PdfToZplException
     */
-    private function pdfToImages(string $pdfData): Collection {
+    public function pdfToImages(string $pdfData): Collection {
         $img = new Imagick();
         $dpi = $this->settings->dpi;
         $img->setResolution($dpi, $dpi);
