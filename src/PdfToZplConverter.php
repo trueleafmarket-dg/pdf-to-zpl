@@ -38,7 +38,7 @@ class PdfToZplConverter implements ZplConverterService {
     /**
     * @return Collection<int, string>
     */
-    private function pdfToZpls(string $pdfData): Collection {
+    public function pdfToZpls(string $pdfData): Collection {
         return $this->pdfToImages($pdfData)
             ->map(fn ($img) => $this->imageConverter->rawImageToZpl($img));
     }
